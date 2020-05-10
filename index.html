@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<title>Maket_1</title>
 		<link rel="stylesheet" href="style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	
 	<body>
@@ -11,7 +12,9 @@
 			<div class="logotip">
 				<img src="img/logo.png" alt="logo">
 			</div>			
-			<nav class="nav">
+			<div class="nav">
+				<a href="#" class="open_menu"></a>
+				
 				<ul class="menu">
 					<li><a href="#">Features</a></li>
 					<li><a href="#">About</a></li>
@@ -19,7 +22,7 @@
 					<li><a href="#">Reviews</a></li>
 					<li><a href="#">Contact</a></li>
 				</ul>
-			</nav>
+			</div>		
 		</header>
 		
 		
@@ -62,6 +65,23 @@
 					 </form>					
 				</div>
 			</div>
-		</main>
+		</main>			
+		
+		
+		
+		
+		<script>	
+			var menu = document.getElementsByClassName("menu")[0];		
+			var button = document.getElementsByClassName("open_menu")[0];
+			var nav = document.getElementsByClassName("nav")[0];
+			var main = document.getElementsByClassName("main")[0];	
+			button.addEventListener("click", function(){
+				button.classList.toggle("active");
+			  menu.classList.toggle("active");
+			  nav.classList.toggle("active");
+			  main.classList.toggle("deactive");
+			}, false);
+		</script>		
+		
 	</body>
 </html>

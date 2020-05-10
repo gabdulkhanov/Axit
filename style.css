@@ -13,9 +13,10 @@
 	box-sizing: inherit;
 	padding: 0;
 	margin: 0;
+	border: 1px solid transparent;
 }
 
-/*************ШАПКА*****************/
+/*************HEADER*****************/
 .header {
 	width: 90%;
 	max-width: 1400px;
@@ -23,49 +24,132 @@
 	background: #000;
 	margin: 0 auto;
 	position: relative;	
+	z-index: 1;
 }
 .logotip {
+	z-index: 2;
 	position: absolute;
 	left: 9.5rem;	
 	top: 1.4rem;
 }
 
 
-/*************МЕНЮ ШАПКИ*****************/
+/*************MENU HEADER*****************/
+@media (min-width: 770px) {
+	.header .menu {		
+		display: grid;
+		grid-template-columns: repeat(5, 3.75rem);
+		grid-template-rows: 1fr;
+		grid-gap: 2em;
+		color: #fff;
+		list-style-type: none;
+		padding-left: 0;
+		position: absolute;
+		right: 9.5rem;
+		top: 0.5rem;
+	}
 
-.header .menu {
-	display: grid;
-	grid-template-columns: repeat(5, 3.75rem);
-	grid-template-rows: 1fr;
-	grid-gap: 2em;
-	color: #fff;
-	list-style-type: none;
-	padding-left: 0;
-	position: absolute;
-	right: 9.5rem;
-	top: 0.5rem;
-}
-.header > .nav > .menu > li > a {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 0.9em;
-	color: var(--color-menu);
-	text-decoration: none;
-}
-.header > .nav > .menu > li > a:link {	
-	color: green;		
-}
-.header > .nav > .menu > li > a:visited {	
-	color: var(--color-menu);		
-}
-.header > .nav > .menu > li > a:hover {	
-	color: #bb0b0b;	
-	text-decoration: underline;
-}
-.header > .nav > .menu > li > a:active {	
-	color: #00f;	
+	.header > .nav > .menu > li > a {
+		font-family: 'Open Sans', sans-serif;
+		font-size: 0.9em;
+		color: var(--color-menu);
+		text-decoration: none;
+	}
+	.header > .nav > .menu > li > a:link {	
+		color: green;		
+	}
+	.header > .nav > .menu > li > a:visited {	
+		color: var(--color-menu);		
+	}
+	.header > .nav > .menu > li > a:hover {	
+		color: #bb0b0b;	
+		text-decoration: underline;
+	}
+	.header > .nav > .menu > li > a:active {	
+		color: #00f;	
+	}
 }
 
-/**************************************/
+/*****************MOBILE_MENU************************/
+
+@media (max-width: 769px) {
+	
+	.nav.active {
+		background-color: #c2c2c2;		
+		height: 100vh;
+		z-index: 0;		
+	}
+	.nav.active:after {
+		content: "";
+		position: absolute;
+		background-color: #000;	
+		width: 100%;		
+		height: 70px;
+		z-index: 1;
+	}
+	
+	.open_menu {
+		display: block;	
+		box-sizing: border-box;
+		background-color: transparent;		
+		position: absolute;
+		right: 2rem;
+		top: 1rem;
+		width: 20px;
+		color: #f00;				
+		text-decoration: none;
+		font-size: 32px;
+		font-weight: 900;
+		z-index: 2;
+		font-family: Times, sans-serif; 		
+	}
+	
+	.open_menu::after {			
+		content: "\2261";				
+	}
+	.open_menu.active::after {				
+		content: "x";
+	}	
+	
+	.menu, .menu.active {			
+		position: absolute;
+		top: -500px;	
+		list-style-type: none;
+		padding-left: 0;		
+		font-size: 28px;
+		width: 100%;	
+		text-align: center;			
+	}
+		
+	.menu.active {							
+		top: 70px;
+	
+		-webkit-transition: all 3s ease 0s;
+		 -moz-transition: all 3s ease 0s;
+		 -o-transition: all 3s ease 0s;
+		 transition: all 3s ease 0s;
+	}	
+
+	
+	.menu > li, .menu.active > li {	
+		width: 100%;
+		background-color: #00f;
+		margin: 10px 0;	
+		padding: 10px 0;
+			
+	}		
+	.menu > li > a, .menu.active > li > a {
+		color: #fff;		
+		text-decoration: none;
+	}
+	
+	.main.deactive {
+		display: none;
+	}
+}
+
+/****************END_MENU***************/
+
 
 /*****************MAIN*************/
 
