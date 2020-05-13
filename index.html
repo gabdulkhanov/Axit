@@ -9,10 +9,10 @@
 	
 	<body>
 		<header class="header">
-			<div class="logotip">
+			<div class="header__logotip">
 				<img src="img/logo.png" alt="logo">
 			</div>			
-			<div class="nav">
+			<div class="header__nav">
 				<a href="#" class="open_menu"></a>
 				
 				<ul class="menu">
@@ -27,11 +27,11 @@
 		
 		
 		<main class="main">
-			<div class="main_text">
+			<div class="main__caption">
 			   <p>Insert your picture here&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 			</div>
-			<div class="container_main">
-				<div class="item">
+			<div class="main__wrapper">
+				<div class="main__item">
 					<div class="logo_img">
 						<img src="img/logo2.png" alt="logo">
 					</div>
@@ -51,7 +51,7 @@
 					</div>
 				</div>
 				
-				<div class="item">
+				<div class="main__item">
 					 <form action="#">
 							<div class="text_outer_form">
 								<p class="text_form">Try Your <span class="orange">FREE</span> Trial Today</p>
@@ -73,7 +73,7 @@
 		<script>	
 			var menu = document.getElementsByClassName("menu")[0];		
 			var button = document.getElementsByClassName("open_menu")[0];
-			var nav = document.getElementsByClassName("nav")[0];
+			var nav = document.getElementsByClassName("header__nav")[0];
 			var main = document.getElementsByClassName("main")[0];	
 			button.addEventListener("click", function(){
 				button.classList.toggle("active");
