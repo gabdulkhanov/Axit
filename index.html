@@ -4,82 +4,91 @@
 		<meta charset="UTF-8">
 		<title>Maket_1</title>
 		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="media.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	
 	<body>
-		<header class="header">
-			<div class="header__logotip">
-				<img src="img/logo.png" alt="logo">
-			</div>			
-			<div class="header__nav">
-				<a href="#" class="open_menu"></a>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__logotip">
+					<a href="index.html">
+						<img src="img/logo.png" alt="logo" class="header__img">
+					</a>
+				</div>	
 				
-				<ul class="menu">
-					<li><a href="#">Features</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Pricing</a></li>
-					<li><a href="#">Reviews</a></li>
-					<li><a href="#">Contact</a></li>
-				</ul>
-			</div>		
-		</header>
-		
-		
-		<main class="main">
-			<div class="main__caption">
-			   <p>Insert your picture here&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-			</div>
-			<div class="main__wrapper">
-				<div class="main__item">
-					<div class="logo_img">
-						<img src="img/logo2.png" alt="logo">
-					</div>
-					<div class="logo_text">
-						<p>MODERN AXURE TEMPLATE FOR BEAUTIFUL PROTOTYPES</p>
-					</div>
-					<div class="line">
+				<div class="header__nav">
+					<a href="#" class="open_menu"></a>
 					
+					<ul class="header__menu">
+						<li class="header__item"><a href="#">Features</a></li>
+						<li class="header__item"><a href="#">About</a></li>
+						<li class="header__item"><a href="#">Pricing</a></li>
+						<li class="header__item"><a href="#">Reviews</a></li>
+						<li class="header__lastitem"><a href="#">Contact</a></li>
+					</ul>
+				</div>		
+			</header>
+
+			
+			
+			<main class="main">
+				<div class="main__caption">
+				   <p>Insert your picture here</p>
+				</div>
+				<div class="main__wrapper">
+					<div class="main__item item1">
+						<div class="logo_img">
+							<img src="img/logo2.png" alt="logo" class="main__img">
+						</div>
+						<div class="logo_text">
+							<p>MODERN AXURE TEMPLATE for BEAUTIFUL PROTOTYPES</p>
+						</div>
+						<div class="line">
+						
+						</div>
+						<div class="logo_message">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+							euismod bibendum laoreet. Proin gravida dolor sit amet lacus
+							accumsan et viverra justo commodo.</p>
+						</div>
+						<div class="button_download">
+							<a href="#" class="download">Download</a>					
+						</div>
 					</div>
-					<div class="logo_message">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-						euismod bibendum laoreet. Proin gravida dolor sit amet lacus
-						accumsan et viverra justo commodo.</p>
-					</div>
-					<div class="button_download">
-						<a href="#" class="download">Download</a>					
+					
+					<div class="main__item item2">
+						 <form action="#" class="menu__form">
+								<div class="text_outer_form">
+									<p class="text_form">Try Your <span class="orange">FREE</span> Trial Today</p>
+								</div>
+								
+								<p><input class="data" type="text" name="name" placeholder="Name"></p>
+								<p><input class="data" type="email" name="email" placeholder="Email"></p>
+								<p><input class="data" type="password" name="password" placeholder="Password"></p>
+								
+								<p class="btn"><input class="btn_submit" type="submit" value="Get Started"></p>
+						 </form>					
 					</div>
 				</div>
-				
-				<div class="main__item">
-					 <form action="#">
-							<div class="text_outer_form">
-								<p class="text_form">Try Your <span class="orange">FREE</span> Trial Today</p>
-							</div>
-							
-							<p><input class="data" type="text" name="name" placeholder="Name"></p>
-							<p><input class="data" type="email" name="email" placeholder="Email"></p>
-							<p><input class="data" type="password" name="password" placeholder="Password"></p>
-							
-							<p class="btn"><input class="btn_submit" type="submit" value="Get Started"></p>
-					 </form>					
-				</div>
-			</div>
-		</main>			
+			</main>
+			
+			
+		</div>		
 		
 		
 		
 		
 		<script>	
-			var menu = document.getElementsByClassName("menu")[0];		
+			var menu = document.getElementsByClassName("header__menu")[0];		
 			var button = document.getElementsByClassName("open_menu")[0];
 			var nav = document.getElementsByClassName("header__nav")[0];
 			var main = document.getElementsByClassName("main")[0];	
 			button.addEventListener("click", function(){
 				button.classList.toggle("active");
-			  menu.classList.toggle("active");
-			  nav.classList.toggle("active");
-			  main.classList.toggle("deactive");
+				menu.classList.toggle("active");
+				nav.classList.toggle("active");
+				main.classList.toggle("deactive");
 			}, false);
 		</script>		
 		
